@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox*/
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f5f2;
+  color: #245779;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================================== */
+/* Header */
+/* ==================================== */
+#head {
+  background-color: #245779;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+}
+.row {
+  display: flex;
+  padding: 10px 10px;
+}
+.col-1 {
+  display: flex;
+  margin-left: 10%;
+  align-items: center;
+  color: white;
+}
+.col-2 {
+  display: flex;
+  margin-left: 40%;
+}
+.col-2 ul li {
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+}
+.col-2 ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-weight: 600;
+
+  transition: color 0.2s;
+}
+.col-2 ul li a:hover {
+  color: #5bbcff;
+}
+/* ==================================== */
+/* main */
+/* ==================================== */
+.main {
+  padding-top: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+main h2 {
+  font-size: 2.3rem;
+  margin-top: 10px;
+}
+main p {
+  font-size: 1.2rem;
+}
+.booking-text {
+  margin-top: 50px;
+}
+.booking-text h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  display: inline-block;
+}
+#till-date {
+  color: #cf1212;
+}
+/* ==================================== */
+/* WebInfo Text */
+/* ==================================== */
+.booking-text .p1 {
+  font-size: 1rem;
+  margin-top: 40px;
+}
+.booking-text .p2 {
+  padding-top: 40px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.booking-text .p3 {
+  padding-top: 30px;
+  font-size: 1rem;
+}
+/* ==================================== */
+/* Date Picker and Calculator */
+/* ==================================== */
+.date-calculator {
+  margin: 20px 450px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-overflow: clip;
+}
+.date-calculator table tr {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #cf1212;
+}
+.date-calculator table tr form {
+  padding-left: 10px;
+}
+.date-calculator table tr form input {
+  height: 50px;
+  width: 300px;
+  border-radius: 7px;
+  border: 0;
+  background: #77e4c8;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+.p4 {
+  margin-top: 30px;
+  font-size: 0.7rem;
+  margin-bottom: 200px;
+}
+.booking-date {
+  text-align: centre;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.booking-date p {
+  display: inline-block;
+  font-size: 2rem;
+}
+#date {
+  color: #cf1212;
+}
+/* ==================================== */
+/* Add To Caledndar Button & Options */
+/* ==================================== */
+.btn {
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+  width: fit-content;
+  border: none;
+  padding: 7px 20px;
+  border-radius: 5px;
+  color: white;
+  background: #4d48e3;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(#4d48e3, #0a04a1);
+}
+.add-to-calendar {
+  position: relative;
+  display: inline-block;
+}
+.calendar-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+}
+.calendar-content svg {
+  width: 15px;
+  height: 16px;
+  color: #b5abab;
+  margin-right: 5px;
+}
+.calendar-content a {
+  color: black;
+  padding: 7px 16px;
+  text-decoration: none;
+  display: block;
+}
+.add-to-calendar a:hover {
+  background-color: #ddd;
+}
+.show {
+  display: block;
+}
+
+/* ==================================== */
+/* Footer */
+/* ==================================== */
+.foot {
+  text-align: center;
+}
+.foot-above {
+  padding-top: 50px;
+  background-color: #102c57;
+}
+.foot-below {
+  padding: 40px 0;
+  background-color: #245779;
+}
+.foot div h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+}
+/* ==================================== */
+/* Dark Mode Button */
+/* ==================================== */
+#night_mode {
+  padding: 8px 10px;
+}
+label {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+label input {
+  position: absolute;
+  opacity: 0;
+}
+#sun {
+  font-size: 1rem;
+  color: black;
+  filter: drop-shadow(0 0 2px rgba(46, 43, 43, 0.5));
+
+  transition: 1s ease;
+  transition-delay: 0.8s;
+}
+input:checked ~ #sun {
+  transition-delay: 0s;
+  transform: rotate(360deg) scale(0);
+}
+#moon {
+  position: absolute;
+  font-size: 1rem;
+  color: #d2cbcb;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  transition: 1s ease;
+  transform: scale(0);
+}
+input:checked ~ #moon {
+  transition-delay: 0.8s;
+  transform: scale(1) rotate(360deg);
+}
+.toggle {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #f8f8f8;
+  border-radius: 50%;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  transition: 1s;
+}
+input:checked ~ .toggle {
+  background: #2b2b2b;
+}
+/* ==================================== */
+/* Dark Mode */
+/* ==================================== */
+.dark-mode {
+  background-color: #102c57;
+  color: #ffbb70;
+
+  ::selection {
+    background: #38759d;
+  }
+  ::-moz-selection {
+    /* Code for Firefox */
+    background: #38759d;
+  }
+}
+/* ==================================== */
+/* Scrollbar */
+/* ==================================== */
+::-webkit-scrollbar {
+  display: none;
+}
+/* ==================================== */
+/* Unselectable */
+/* ==================================== */
+.unselectable {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ==================================== */
+/* Burger Menu */
+/* ==================================== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* ==================================== */
+/* Screen Omptimization */
+/* ==================================== */
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  /* ================Header==================== */
+  .row {
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  .col-1 {
+    display: block;
+    margin-left: 5%;
+  }
+  .col-1 h2 {
+    font-size: 1.2rem;
+  }
+  .col-2 {
+    display: block;
+  }
+  /* ================Main==================== */
+  .main {
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  main h2 {
+    font-size: 1.8rem;
+    margin-top: 20%;
+  }
+  main p {
+    font-size: 1rem;
+    margin-top: 10%;
+    font-weight: 500;
+  }
+  .booking-text {
+    margin-top: 5%;
+  }
+  .booking-text h1 {
+    font-size: 2.2rem;
+  }
+  /* ================WebInfo Text==================== */
+  .booking-text .p1 {
+    font-size: 0.7rem;
+    margin-top: 5%;
+    font-weight: 400;
+  }
+  .booking-text .p2 {
+    padding-top: 2%;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+  .booking-text .p3 {
+    padding-top: 2%;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+  /* ================Date Picker and Calculator==================== */
+  .date-calculator {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .date-calculator table tr {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .date-calculator table tr td {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .date-calculator table tr {
+    font-size: 1rem;
+  }
+  .date-calculator table tr form {
+    padding-left: 0.8rem;
+  }
+  .date-calculator table tr form input {
+    height: 40px;
+    width: 240px;
+    font-size: 0.8rem;
+  }
+  .p4 {
+    margin-top: 10%;
+    margin-bottom: 35%;
+    font-size: 0.5rem;
+  }
+  .booking-date {
+    margin-bottom: 10%;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .booking-date p {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  /* ================Add To Caledndar Button & Options==================== */
+  .btn {
+    font-size: 1rem;
+    padding: 5px 18px;
+    border-radius: 7px;
+  }
+  .add-to-calendar {
+    position: relative;
+    display: inline-block;
+  }
+  .calendar-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  .calendar-content svg {
+    width: 10px;
+    height: 11px;
+    color: #b5abab;
+    margin-right: 5px;
+  }
+  .calendar-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .add-to-calendar a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  /* ================Footer==================== */
+  .foot-above {
+    padding-top: 40px;
+  }
+  .foot-below {
+    padding: 30px 0;
+  }
+  .foot div h3 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  /* ================Dark Mode Button ==================== */
+  #night_mode {
+    padding-top: 5px;
+    /* padding-left: 70px; */
+    margin-left: -32%;
+  }
+  label {
+    width: 20px;
+    height: 20px;
+  }
+  #sun {
+    font-size: 0.8rem;
+  }
+  #moon {
+    font-size: 0.8rem;
+  }
+  .toggle {
+    width: 20px;
+    height: 20px;
+  }
+  /* ================Burger Menu==================== */
+  .hamburger {
+    display: block;
+    margin-left: -300%;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    left: -100%;
+    top: 57px;
+    height: 40px;
+    gap: 0;
+    flex-direction: row;
+    background-color: #083271;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  .nav li {
+    margin-top: -5px;
+  }
+
+  .nav li:nth-child(1) {
+    margin-left: -30px;
+  }
+  .nav li:nth-child(2) {
+    margin-left: 30px;
+  }
+
+  .nav li a {
+    font-size: 0.6rem;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+}
