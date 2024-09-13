@@ -52,7 +52,6 @@ body {
   color: white;
   margin: 0 15px;
   font-weight: 600;
-
   transition: color 0.2s;
 }
 .col-2 ul li a:hover {
@@ -438,7 +437,7 @@ input:checked ~ .toggle {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 180px;
+    min-width: 200px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -539,5 +538,790 @@ input:checked ~ .toggle {
 
   .nav.active {
     left: 0;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) and (orientation: landscape) {
+  /* ================Header==================== */
+  .row {
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  .col-1 {
+    display: block;
+    margin-left: 10%;
+  }
+  .col-1 h2 {
+    font-size: 1.6rem;
+  }
+  .col-2 {
+    display: block;
+  }
+  /* ================Main==================== */
+  .main {
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  main h2 {
+    font-size: 1.8rem;
+    margin-top: 10%;
+  }
+  main p {
+    font-size: 1.2rem;
+    margin-top: 2%;
+    font-weight: 500;
+  }
+  .booking-text {
+    margin-top: 5%;
+  }
+  .booking-text h1 {
+    font-size: 2.4rem;
+  }
+  /* ================WebInfo Text==================== */
+  .booking-text .p1 {
+    font-size: 0.8rem;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+  .booking-text .p2 {
+    padding-top: 2%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .booking-text .p3 {
+    padding-top: 2%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  /* ================Date Picker and Calculator==================== */
+  .date-calculator {
+    margin-top: 7%;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .date-calculator table tr {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .date-calculator table tr td {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .date-calculator table tr td:nth-child(1) {
+    margin-right: 8%;
+  }
+  .date-calculator table tr {
+    font-size: 1rem;
+  }
+  .date-calculator table tr form {
+    padding-left: 1rem;
+    margin-left: -15%;
+  }
+  .date-calculator table tr form input {
+    height: 40px;
+    width: 240px;
+    font-size: 1rem;
+  }
+  .p4 {
+    margin-top: 5%;
+    margin-bottom: 25%;
+    font-size: 0.6rem;
+  }
+  .booking-date {
+    margin-bottom: 3%;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .booking-date p {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  /* ================Add To Caledndar Button & Options==================== */
+  .btn {
+    font-size: 0.9rem;
+    padding: 5px 18px;
+    border-radius: 7px;
+  }
+  .add-to-calendar {
+    position: relative;
+    display: inline-block;
+  }
+  .calendar-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  .calendar-content svg {
+    width: 15px;
+    height: 16px;
+    color: #b5abab;
+    margin-right: 5px;
+  }
+  .calendar-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .add-to-calendar a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  /* ================Footer==================== */
+  .foot-above {
+    padding-top: 40px;
+  }
+  .foot-below {
+    padding: 30px 0;
+  }
+  .foot div h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  /* ================Dark Mode Button ==================== */
+  #night_mode {
+    padding-top: 5px;
+    padding-left: 70px;
+    margin-left: -25%;
+  }
+  label {
+    width: 30px;
+    height: 30px;
+  }
+  #sun {
+    font-size: 1rem;
+  }
+  #moon {
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 30px;
+    height: 30px;
+  }
+  /* ================Burger Menu==================== */
+  .hamburger {
+    display: block;
+    /* margin-left: 50%; */
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    left: -100%;
+    top: 57px;
+    height: 60px;
+    gap: 0;
+    flex-direction: row;
+    background-color: #083271;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  .nav li {
+    margin-top: 5px;
+  }
+
+  .nav li:nth-child(1) {
+    margin-left: -40px;
+  }
+  .nav li:nth-child(2) {
+    margin-left: 270px;
+  }
+
+  .nav li a {
+    font-size: 1rem;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  /* ================Header==================== */
+  .row {
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+  .col-1 {
+    display: block;
+    margin-left: 10%;
+  }
+  .col-1 h2 {
+    font-size: 1.6rem;
+  }
+  .col-2 {
+    display: block;
+  }
+  /* ================Main==================== */
+  .main {
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  main h2 {
+    font-size: 1.8rem;
+    margin-top: 10%;
+  }
+  main p {
+    font-size: 1.2rem;
+    margin-top: 2%;
+    font-weight: 500;
+  }
+  .booking-text {
+    margin-top: 5%;
+  }
+  .booking-text h1 {
+    font-size: 2.4rem;
+  }
+  /* ================WebInfo Text==================== */
+  .booking-text .p1 {
+    font-size: 0.8rem;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+  .booking-text .p2 {
+    padding-top: 2%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .booking-text .p3 {
+    padding-top: 2%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  /* ================Date Picker and Calculator==================== */
+  .date-calculator {
+    margin-top: 7%;
+    margin-left: 30%;
+    margin-right: 10%;
+  }
+  .date-calculator table tr {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .date-calculator table tr td {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .date-calculator table tr td:nth-child(1) {
+    margin-left: 7%;
+  }
+  .date-calculator table tr {
+    font-size: 1rem;
+  }
+  .date-calculator table tr form {
+    padding-left: 1rem;
+  }
+  .date-calculator table tr form input {
+    height: 40px;
+    width: 240px;
+    font-size: 1rem;
+  }
+  .p4 {
+    margin-top: 5%;
+    margin-bottom: 25%;
+    font-size: 0.6rem;
+  }
+  .booking-date {
+    margin-bottom: 3%;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .booking-date p {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  /* ================Add To Caledndar Button & Options==================== */
+  .btn {
+    font-size: 1rem;
+    padding: 5px 18px;
+    border-radius: 7px;
+  }
+  .add-to-calendar {
+    position: relative;
+    display: inline-block;
+  }
+  .calendar-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  .calendar-content svg {
+    width: 15px;
+    height: 16px;
+    color: #b5abab;
+    margin-right: 5px;
+  }
+  .calendar-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .add-to-calendar a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  /* ================Footer==================== */
+  .foot-above {
+    padding-top: 40px;
+  }
+  .foot-below {
+    padding: 30px 0;
+  }
+  .foot div h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  /* ================Dark Mode Button ==================== */
+  #night_mode {
+    padding-top: 5px;
+    padding-left: 70px;
+    margin-left: -25%;
+  }
+  label {
+    width: 30px;
+    height: 30px;
+  }
+  #sun {
+    font-size: 1rem;
+  }
+  #moon {
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 30px;
+    height: 30px;
+  }
+  /* ================Burger Menu==================== */
+  .hamburger {
+    display: block;
+    /* margin-left: 50%; */
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav {
+    position: fixed;
+    left: -100%;
+    top: 57px;
+    height: 60px;
+    gap: 0;
+    flex-direction: row;
+    background-color: #083271;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+
+  .nav li {
+    margin-top: 5px;
+  }
+
+  .nav li:nth-child(1) {
+    margin-left: -40px;
+  }
+  .nav li:nth-child(2) {
+    margin-left: 270px;
+  }
+
+  .nav li a {
+    font-size: 1rem;
+  }
+
+  .nav.active {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* ================Header==================== */
+  .row {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .col-1 {
+    padding-top: 10px;
+    display: block;
+    margin-left: 5%;
+  }
+  .col-1 h2 {
+    font-size: 1rem;
+    margin-left: 5%;
+  }
+  .col-2 {
+    display: block;
+    margin-left: 20%;
+  }
+  .col-2 ul li {
+    font-size: 1rem;
+  }
+  /* ================Main==================== */
+  .main {
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  main h2 {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+  main p {
+    font-size: 1.2rem;
+    margin-top: 5%;
+    font-weight: 500;
+  }
+  .booking-text {
+    margin-top: 10%;
+  }
+  .booking-text h1 {
+    font-size: 2.6rem;
+  }
+  /* ================WebInfo Text==================== */
+  .booking-text .p1 {
+    font-size: 0.9rem;
+    margin-top: 5%;
+    font-weight: 400;
+  }
+  .booking-text .p2 {
+    padding-top: 2%;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .booking-text .p3 {
+    padding-top: 2%;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  /* ================Date Picker and Calculator==================== */
+  .date-calculator {
+    margin-top: 5%;
+    margin-left: 12%;
+    margin-right: 10%;
+  }
+  .date-calculator table tr {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .date-calculator table tr td {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .date-calculator table tr {
+    font-size: 1.2rem;
+  }
+  .date-calculator table tr form {
+    padding-left: 1.2rem;
+  }
+  .date-calculator table tr form input {
+    height: 45px;
+    width: 270px;
+    font-size: 1rem;
+  }
+  .p4 {
+    margin-top: 5%;
+    margin-bottom: 30%;
+    font-size: 0.7rem;
+  }
+  .booking-date {
+    margin-bottom: 5%;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .booking-date p {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  /* ================Add To Caledndar Button & Options==================== */
+  .btn {
+    font-size: 1.1rem;
+    padding: 5px 18px;
+    border-radius: 7px;
+  }
+  .add-to-calendar {
+    position: relative;
+    display: inline-block;
+  }
+  .calendar-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  .calendar-content svg {
+    width: 12px;
+    height: 13px;
+    color: #b5abab;
+    margin-right: 5px;
+  }
+  .calendar-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .add-to-calendar a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  /* ================Footer==================== */
+  .foot-above {
+    padding-top: 40px;
+  }
+  .foot-below {
+    padding: 30px 0;
+  }
+  .foot div h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  /* ================Dark Mode Button ==================== */
+  #night_mode {
+    padding-top: 10px;
+    padding-left: 45px;
+  }
+  label {
+    width: 25px;
+    height: 25px;
+  }
+  #sun {
+    font-size: 1rem;
+  }
+  #moon {
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  /* ================Header==================== */
+  .row {
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+  .col-1 {
+    padding-top: 10px;
+    display: block;
+    margin-left: 5%;
+  }
+  .col-1 h2 {
+    font-size: 1.2rem;
+    margin-left: 7%;
+  }
+  .col-2 {
+    display: block;
+    margin-left: 25%;
+  }
+  .col-2 ul li {
+    font-size: 1.2rem;
+  }
+  /* ================Main==================== */
+  .main {
+    padding-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  main h2 {
+    font-size: 2.4rem;
+    margin-top: 3%;
+  }
+  main p {
+    font-size: 1.4rem;
+    margin-top: 3%;
+    font-weight: 500;
+  }
+  .booking-text {
+    margin-top: 7%;
+  }
+  .booking-text h1 {
+    font-size: 3rem;
+  }
+  /* ================WebInfo Text==================== */
+  .booking-text .p1 {
+    font-size: 1rem;
+    margin-top: 4%;
+    font-weight: 400;
+  }
+  .booking-text .p2 {
+    padding-top: 2%;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .booking-text .p3 {
+    padding-top: 2%;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  /* ================Date Picker and Calculator==================== */
+  .date-calculator {
+    margin-top: 7%;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .date-calculator table tr {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .date-calculator table tr td {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+  .date-calculator table tr {
+    font-size: 1.4rem;
+  }
+  .date-calculator table tr form {
+    padding-left: 1.2rem;
+  }
+  .date-calculator table tr form input {
+    height: 45px;
+    width: 270px;
+    font-size: 1rem;
+  }
+  .p4 {
+    margin-top: 5%;
+    margin-bottom: 30%;
+    font-size: 0.8rem;
+  }
+  .booking-date {
+    margin-bottom: 5%;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .booking-date p {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  /* ================Add To Caledndar Button & Options==================== */
+  .btn {
+    font-size: 1rem;
+    padding: 5px 18px;
+    border-radius: 7px;
+  }
+  .add-to-calendar {
+    position: relative;
+    display: inline-block;
+  }
+  .calendar-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 210px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+  }
+  .calendar-content svg {
+    width: 12px;
+    height: 13px;
+    color: #b5abab;
+    margin-right: 5px;
+  }
+  .calendar-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    display: block;
+  }
+  .add-to-calendar a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  /* ================Footer==================== */
+  .foot-above {
+    padding-top: 40px;
+  }
+  .foot-below {
+    padding: 30px 0;
+  }
+  .foot div h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  /* ================Dark Mode Button ==================== */
+  #night_mode {
+    padding-top: 10px;
+    padding-left: 45px;
+  }
+  label {
+    width: 25px;
+    height: 25px;
+  }
+  #sun {
+    font-size: 1rem;
+  }
+  #moon {
+    font-size: 1rem;
+  }
+  .toggle {
+    width: 25px;
+    height: 25px;
   }
 }
