@@ -25,6 +25,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   position: fixed;
+  z-index: 99999;
 }
 .row {
   display: flex;
