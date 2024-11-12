@@ -61,7 +61,7 @@ function bookingDateCalculator() {
     travel_date.addEventListener("change", function () {
         let input = this.value;
         let dateEntered = new Date(input);
-        let booking_date = dateCalculator(dateEntered, -120);
+        let booking_date = dateCalculator(dateEntered, -60);
         let booking_text = document.getElementById("booking-date-text");
         let date_text = document.getElementById("date");
         booking_text.innerHTML = "Booking Starts on : ";
@@ -206,7 +206,7 @@ function responsiveMenu() {
 function mainFunction() {
 
     // Date calculator
-    let date = dateCalculator(new Date(), 120);
+    let date = dateCalculator(new Date(), 60);
     let text = document.getElementById("till-date");
     text.innerHTML = `${date}`;
 
