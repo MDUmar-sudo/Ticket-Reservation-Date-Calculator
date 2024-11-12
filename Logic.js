@@ -13,7 +13,7 @@ function dateCalculator(input, days) {
 
     let today = new Date(input);
 
-    // for calculating 120 days advance reservation
+    // for calculating 60 days advance reservation
     today.setDate(today.getDate() + days);
 
     // getting date components afte calculation
@@ -108,8 +108,8 @@ function CalendarLink() {
         let journey_month = journey_date.getMonth() + 1;
         let journey_dt = journey_date.getDate();
 
-        // for calculating 120 days advance reservation
-        journey_date.setDate(journey_date.getDate() - 120);
+        // for calculating 60 days advance reservation
+        journey_date.setDate(journey_date.getDate() - 60);
 
         // getting date components after calculation
         let year = journey_date.getFullYear();
